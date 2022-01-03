@@ -79,7 +79,7 @@ const Home = ({breweries, setList}) => {
           <Search breweries={breweries} setList={setList}/>
         </div>
         <div className='cardsArea'>
-          {breweries.length !== 0 && breweries.map((item, index)=> {
+          {breweries.length !== 0 && breweries.map(function(item, index) {
             //display a maximum of six cards
             if(index > 5) return;
             return <Card key={index} brewery={item} id={index}></Card>
